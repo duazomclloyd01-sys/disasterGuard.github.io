@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typhoon Safety | DisasterGuard</title>
+  <style>
+    /* GENERAL RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-image: url("logomoko/kostiantyn-li-vTJ2dAFXEKM-unsplash.jpg"); /* your background image */
+  background-size: cover;           /* cover entire viewport */
+  background-repeat: no-repeat;
+  background-position: center center; /* center the image */
+  background-attachment: fixed;     /* keeps the background fixed while scrolling */
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      margin-left: 1.2em;
+      padding-left: 0;
+      list-style-type: disc;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: #0d47a1;
+      color: #fff;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .brand {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .main-nav a {
+      margin-left: 1.5em;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .main-nav a:hover {
+      color: #ffca28;
+    }
+
+    /* BANNER */
+    .banner {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .banner h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3em;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    .content section {
+      background: #fff;
+      padding: 1.8em;
+      margin-bottom: 1.8em;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 0.6em;
+      border-bottom: 2px solid #0d47a1;
+      display: inline-block;
+      padding-bottom: 0.2em;
+    }
+
+    h3 {
+      color: #1976d2;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    ul li {
+      margin-bottom: 0.6em;
+    }
+
+    strong {
+      color: #d32f2f;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      text-align: center;
+      padding: 1.5em 0;
+      background: #0d47a1;
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .banner h1 {
+        font-size: 2em;
+      }
+
+      .main-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        margin-top: 0.5em;
+      }
+
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">DisasterGuard</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="disaster.html">Disasters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- TOP IMAGE -->
+  <section class="banner">
+    <img src="logomoko/pexels-pixabay-76969.jpg" alt="Typhoon" />
+    <h1>Typhoon</h1>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        A typhoon is a tropical cyclone characterized by extremely strong
+        winds, heavy rain, and storm surges. The Philippines experiences many
+        typhoons each year due to its location along the Pacific typhoon belt.
+      </p>
+    </section>
+
+    <!-- CAUSES -->
+    <section>
+      <h2>Causes</h2>
+      <ul>
+        <li>Warm ocean waters</li>
+        <li>Low-pressure atmospheric systems</li>
+        <li>Interaction of humidity and rotating wind currents</li>
+      </ul>
+    </section>
+
+    <!-- EFFECTS -->
+    <section>
+      <h2>Effects</h2>
+      <ul>
+        <li>Strong wind damage to structures</li>
+        <li>Flooding and heavy rainfall</li>
+        <li>Storm surges in coastal areas</li>
+        <li>Power outages and communication loss</li>
+      </ul>
+    </section>
+
+    <!-- WARNING SIGNS -->
+    <section>
+      <h2>Warning Signs</h2>
+      <ul>
+        <li>Weather advisories from PAGASA</li>
+        <li>Rising wind speeds and dark clouds</li>
+        <li>Decreasing atmospheric pressure</li>
+      </ul>
+    </section>
+
+    <!-- SAFETY TIPS -->
+    <section>
+      <h2>Safety Tips</h2>
+
+      <h3>Before</h3>
+      <ul>
+        <li>Secure windows and outdoor items</li>
+        <li>Prepare an evacuation plan</li>
+        <li>Stock food, water, and essentials</li>
+      </ul>
+
+      <h3>During</h3>
+      <ul>
+        <li>Stay indoors and away from windows</li>
+        <li>Avoid coastal areas</li>
+        <li>Monitor official weather reports</li>
+      </ul>
+
+      <h3>After</h3>
+      <ul>
+        <li>Avoid floodwaters</li>
+        <li>Check structural safety of buildings</li>
+        <li>Boil water before drinking</li>
+      </ul>
+    </section>
+
+    <!-- PREP KIT -->
+    <section>
+      <h2>Preparedness Kit</h2>
+      <ul>
+        <li>Battery-powered radio</li>
+        <li>Waterproof bag for documents</li>
+        <li>3-day supply of water & ready-to-eat food</li>
+        <li>Extra batteries and flashlights</li>
+        <li>Tarps and rope</li>
+      </ul>
+    </section>
+
+    <!-- REAL EXAMPLE -->
+    <section>
+      <h2>Real-life Example</h2>
+      <p>
+        <strong>Typhoon Haiyan (Yolanda), 2013</strong> — One of the strongest
+        tropical cyclones in history devastated parts of the Philippines,
+        causing massive storm surges particularly in Tacloban, claiming more
+        than 6,000 lives.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 DisasterGuard. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

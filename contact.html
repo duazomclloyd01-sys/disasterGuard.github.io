@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — DisasterGuard</title>
+  <link rel="stylesheet" href="assets.css" />
+  <style>
+  /* Footer — gradient background */
+  .site-footer {
+    background: linear-gradient(90deg, #0f172a 0%, rgba(43,108,176,0.95) 100%) !important;
+    padding: 30px;
+    margin-top: 60px;
+    text-shadow: none;
+    color: #fff; /* Keep text readable */
+  }
+
+  /* Header — gradient background (same as footer) */
+  .site-header {
+    background: linear-gradient(90deg, #0f172a 0%, rgba(43,108,176,0.95) 100%) !important;
+    padding: 30px;
+    margin-bottom: 0px; /* adjust if needed */
+    text-shadow: none;
+    color: #fff; /* Keep text readable */
+  }
+</style>
+  <style>
+    /* BODY + BACKGROUND */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url("logomoko/scott-rodgerson-ffH_GkINfyY-unsplash.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffd700;
+      text-decoration: none;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffd700;
+    }
+
+    /* MAIN CONTENT LAYOUT */
+    main.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    main section, main aside {
+      flex: 1 1 45%;
+      background: rgba(0,0,0,0.65);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    h3 {
+      margin: 10px 0 5px;
+      color: #ffd700;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* HOTLINES */
+    .hotlines {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hotline {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px 20px;
+      border-left: 5px solid #ffd700;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .hotline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT FORM */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+    }
+
+    form input, form textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: 2px solid #ffd700;
+      background: rgba(255,255,255,0.1);
+    }
+
+    button.btn {
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button.btn:hover {
+      background: #e5c100;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: rgba(0,0,0,0.85);
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+      color: #fff;
+    }
+
+    .site-footer h4 {
+      margin-bottom: 15px;
+      color: #ffd700;
+    }
+
+    .site-footer nav a {
+      color: #fff;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-footer nav a:hover {
+      color: #ffd700;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      main.container {
+        flex-direction: column;
+      }
+      main section, main aside {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">DisasterGuard</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="disaster.html">Disasters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Contact & Emergency Hotlines</h1>
+      <p>If you are facing an emergency, call your local emergency number immediately.</p>
+
+      <div class="hotlines">
+        <div class="hotline">
+          <h3>National Emergency</h3>
+          <p><strong>911</strong></p>
+        </div>
+        <div class="hotline">
+          <h3>Bureau of Fire Protection</h3>
+          <p><strong>(02) 8426-0219 / (02) 8426-0246</strong></p>
+        </div>
+        <div class="hotline">
+          <h3>Philippine National Police</h3>
+          <p><strong>117 (or (02) 722-0650)</strong></p>
+        </div>
+        <div class="hotline">
+          <h3>NDRRMC</h3>
+          <p>(02) 8911-1406 / (02) 8912-2665</p>
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <h2>Send a Message</h2>
+      <form id="contactForm">
+        <label>Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+        <p id="formResult" class="muted"></p>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>DisasterGuard</h4>
+        <p>Helping communities prepare, respond, and recover safely.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <nav>
+          <a href="index.html">Home</a> ·
+          <a href="disasters.html">Disasters</a> ·
+          <a href="about.html">About</a> ·
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Emergency</h4>
+        <p>National emergency hotline: <strong>911</strong></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> DisasterGuard — Stay safe.</div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple form submission feedback
+    const form = document.getElementById('contactForm');
+    const formResult = document.getElementById('formResult');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formResult.textContent = "Message sent successfully!";
+      formResult.style.color = "#ffd700";
+      form.reset();
+    });
+  </script>
+</body>
+</html>

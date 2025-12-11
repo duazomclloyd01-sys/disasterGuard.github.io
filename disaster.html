@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Disasters | DisasterGuard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-dark: #0f172a;
+      --primary-light: #2b6cb0;
+      --overlay: rgba(0, 0, 0, 0.55);
+      --card-bg: rgba(0,0,0,0.8);
+      --text-light: #fdfdfd;
+      --accent-color: #ffd700;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Roboto', sans-serif; color: var(--text-light); line-height: 1.7; }
+    body {
+      background: linear-gradient(var(--overlay), var(--overlay)),
+                  url('logomoko/daniel-koponyas-p2DdFFvlFIU-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .site-header .brand { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: 1px; }
+    .main-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 24px;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .main-nav a:hover { color: var(--accent-color); transform: translateY(-2px); }
+    .main-nav a.active { border-bottom: 2px solid rgba(255,215,0,0.25); }
+
+    /* Page Section */
+    .page-section {
+      text-align: center;
+      padding: 80px 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .page-section h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .page-section p {
+      font-size: 18px;
+      max-width: 850px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.65);
+      padding: 16px 24px;
+      border-radius: 12px;
+      display: inline-block;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Disaster Grid */
+    .disaster-grid {
+      display: flex;
+      gap: 28px;
+      padding: 40px 20px 60px;
+      max-width: 1300px;
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .disaster-card {
+      flex: 0 0 260px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+      color: var(--text-light);
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+    .disaster-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      background: rgba(0,0,0,0.9);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.7);
+    }
+    .img-wrap img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .disaster-card:hover .img-wrap img { transform: scale(1.05); }
+    .card-body { padding: 18px 14px 22px; }
+    .disaster-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      margin: 12px 0 6px;
+    }
+    .card-meta {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 15px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.5);
+      letter-spacing: 0.5px;
+    }
+
+    /* Scrollbar for horizontal cards */
+    .disaster-grid::-webkit-scrollbar {
+      height: 8px;
+    }
+    .disaster-grid::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 4px; }
+    .disaster-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 4px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) { .disaster-grid { flex-wrap: wrap; justify-content: center; } }
+    @media (max-width: 720px) { .disaster-card { flex: 0 0 48%; } }
+    @media (max-width: 480px) { .disaster-card { flex: 0 0 100%; } .main-nav { display: none; } }
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="brand">DisasterGuard</div>
+    <nav class="main-nav" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="disaster.html" class="active">Disasters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section" aria-labelledby="disasters-heading">
+      <h1 id="disasters-heading">Natural Disasters</h1>
+      <p>Choose a disaster below to learn clear, practical safety tips, warning signs, and step-by-step preparedness actions you can take immediately.</p>
+    </section>
+
+    <section class="disaster-grid" aria-label="Disaster types">
+      <a href="fire.html" class="disaster-card">
+        <div class="img-wrap"><img src="logomoko/fachy-marin-EQkV-J2kw0U-unsplash.jpg" alt="A controlled image of a small fire in a kitchen"></div>
+        <div class="card-body"><h3>Fire</h3><p class="card-meta">Learn how to prevent house fires and what to do if one starts.</p></div>
+      </a>
+      <a href="typhoon.html" class="disaster-card">
+        <div class="img-wrap"><img src="logomoko/carl-kho-95ggqnVVoJk-unsplash.jpg" alt="Storm clouds and heavy rain over water"></div>
+        <div class="card-body"><h3>Typhoon</h3><p class="card-meta">Find out how to prepare for strong winds, heavy rain, and flooding.</p></div>
+      </a>
+      <a href="earthquake.html" class="disaster-card">
+        <div class="img-wrap"><img src="logomoko/caglar-oskay-mmLtohu4qmE-unsplash.jpg" alt="Cracked ground as a result of an earthquake"></div>
+        <div class="card-body"><h3>Earthquake</h3><p class="card-meta">Quick actions to stay safe during shaking and how to make a family plan.</p></div>
+      </a>
+      <a href="tsunami.html" class="disaster-card">
+        <div class="img-wrap"><img src="logomoko/tino-rischawy-tRrXIaUMr-w-unsplash.jpg" alt="Rough ocean waves heading toward the shore"></div>
+        <div class="card-body"><h3>Tsunami</h3><p class="card-meta">Recognize natural warnings and the fastest ways to reach higher ground.</p></div>
+      </a>
+      <a href="flood.html" class="disaster-card">
+        <div class="img-wrap"><img src="logomoko/andres-ayala-s-mN3xf9Nw32g-unsplash.jpg" alt="A flooded street with partially submerged cars"></div>
+        <div class="card-body"><h3>Flood</h3><p class="card-meta">Steps to protect your home and family from rising water.</p></div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 DisasterGuard. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

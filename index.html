@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DisasterGuard — Natural Disaster Awareness & Safety</title>
+  <meta name="description" content="DisasterGuard: Learn how to prepare, respond and recover from fires, typhoons, earthquakes, tsunamis and floods." />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* === GLOBAL STYLES === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #f0f0f0;
+      line-height: 1.6;
+      background-image: url("logomoko/Hailuo_Image_aemergency\ kit\,\ \ warning\ signs_453256445465395204.jpg"); /* your background image */
+      background-size: cover;           /* cover entire viewport */
+      background-repeat: no-repeat;
+      background-position: center center; /* center the image */
+      background-attachment: fixed;     
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* === HEADER === */
+    .site-header {
+      background: rgba(15,23,42,0.9);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .site-header .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffd700;
+    }
+
+    nav.main-nav a {
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav.main-nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin-bottom: 50px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 25px;
+      color: #ffd700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .hero-text .btn {
+      background: #2b6cb0;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .hero-text .btn:hover {
+      background: #1e4e8c;
+      transform: scale(1.05);
+    }
+
+    .hero-preview .preview-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .preview-card {
+      width: 180px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .preview-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .preview-card span {
+      display: block;
+      padding: 12px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.7);
+      color: #ffd700;
+      font-size: 1rem;
+    }
+
+    .preview-card:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.8);
+    }
+
+    /* === WHY SECTION === */
+    .why {
+      padding: 70px 30px;
+      margin: 50px auto;
+      max-width: 1200px;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      border-radius: 15px;
+    }
+
+    .why h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      color: #ffd700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .why p {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+
+    .quick-tips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .tip {
+      background: rgba(0,0,0,0.85);
+      padding: 30px 20px;
+      border-radius: 15px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: all 0.3s ease;
+    }
+
+    .tip h3 {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .tip p {
+      color: #f0f0f0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .tip:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: rgba(0,0,0,0.95);
+    }
+
+    /* === FOOTER === */
+    .site-footer {
+      background: rgba(15,23,42,0.95);
+      padding: 50px 20px;
+      margin-top: 60px;
+      color: #fff;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 25px;
+      gap: 30px;
+    }
+
+    .site-footer h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .site-footer nav a {
+      margin: 0 8px;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .site-footer nav a:hover {
+      color: #ffd700;
+    }
+
+    .copyright {
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    /* === RESPONSIVE === */
+    @media(max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .quick-tips {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .preview-card {
+        width: 45%;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .preview-card {
+        width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .why h2 {
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand">DisasterGuard</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="disaster.html">Disasters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Be Ready. Stay Safe.</h1>
+        <p>DisasterGuard empowers you with knowledge on natural disasters — their warning signs, safety measures, and essential tips to protect yourself and your community.</p>
+        <a class="btn" href="disaster.html">Explore Disasters</a>
+      </div>
+
+      <div class="hero-preview">
+        <div class="preview-grid">
+          <a href="fire.html" class="preview-card">
+            <img src="logomoko/fachy-marin-EQkV-J2kw0U-unsplash.jpg" alt="Fire" />
+            <span>Fire</span>
+          </a>
+          <a href="typhoon.html" class="preview-card">
+            <img src="logomoko/carl-kho-95ggqnVVoJk-unsplash.jpg" alt="Typhoon" />
+            <span>Typhoon</span>
+          </a>
+          <a href="earthquake.html" class="preview-card">
+            <img src="logomoko/caglar-oskay-mmLtohu4qmE-unsplash.jpg" alt="Earthquake" />
+            <span>Earthquake</span>
+          </a>
+          <a href="tsunami.html" class="preview-card">
+            <img src="logomoko/tino-rischawy-tRrXIaUMr-w-unsplash.jpg" alt="Tsunami" />
+            <span>Tsunami</span>
+          </a>
+          <a href="flood.html" class="preview-card">
+            <img src="logomoko/andres-ayala-s-mN3xf9Nw32g-unsplash.jpg" alt="Flood" />
+            <span>Flood</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <h2>Why Disaster Awareness Matters</h2>
+      <p>Preparedness saves lives and reduces loss. Knowing what to do — and acting early — helps protect you, your family, and your community.</p>
+
+      <div class="quick-tips">
+        <div class="tip">
+          <h3>Plan</h3>
+          <p>Create a family plan, know evacuation routes, and practice it regularly.</p>
+        </div>
+        <div class="tip">
+          <h3>Prepare</h3>
+          <p>Build an emergency kit, secure important documents, and stay informed.</p>
+        </div>
+        <div class="tip">
+          <h3>Learn</h3>
+          <p>Recognize warning signs and memorize local emergency numbers.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>DisasterGuard</h4>
+        <p>Helping communities prepare, respond, and recover safely.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <nav>
+          <a href="index.html">Home</a> · 
+          <a href="disasters.html">Disasters</a> · 
+          <a href="about.html">About</a> · 
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Emergency</h4>
+        <p>National emergency hotline: <strong>911</strong></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> DisasterGuard — Stay safe.</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

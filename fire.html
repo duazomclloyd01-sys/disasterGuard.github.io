@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire — DisasterGuard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & basics */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.7;
+      background: #f5f5f5;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url('logomoko/robert-harkness-RCJVTl6f_nM-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: disc; margin-left: 20px; }
+
+    /* Container */
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    /* Header */
+    .site-header { background: #d32f2f; color: white; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 1.8rem; font-weight: 700; color: white; letter-spacing: 1px; }
+    .main-nav a { margin-left: 25px; font-weight: 500; color: white; transition: 0.3s; }
+    .main-nav a:hover, .main-nav a.active { text-decoration: underline; }
+    .nav-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: white; cursor: pointer; }
+
+    /* Hero Section */
+    .article-hero { text-align: center; margin-bottom: 40px; }
+    .article-hero-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px; }
+    .article-hero h1 { font-size: 3rem; color: #d32f2f; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+    .article-hero .summary { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; }
+
+    /* Article Sections */
+    article section { margin-bottom: 40px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    article h2 { color: #d32f2f; margin-bottom: 15px; border-bottom: 2px solid #f28b82; padding-bottom: 5px; font-size: 1.8rem; }
+    article h3 { color: #b71c1c; margin-bottom: 10px; font-size: 1.3rem; }
+    article p, article ul { color: #555; font-size: 1rem; margin-bottom: 10px; }
+    ul.kit { list-style-type: square; }
+
+    /* Image Grid */
+    .image-grid { margin-top: 20px; }
+    .mini-grid { display: flex; gap: 15px; flex-wrap: wrap; }
+    .mini-grid img { flex: 1 1 calc(33% - 10px); max-width: 100%; border-radius: 8px; height: 200px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+    /* Layout */
+    main { display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; }
+    article { flex: 3; }
+    .side-cta { flex: 1; }
+    .card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+    .card h3 { margin-bottom: 15px; color: #d32f2f; font-size: 1.5rem; }
+    .card ul { margin-bottom: 15px; }
+    .btn { display: inline-block; padding: 12px 20px; background: #d32f2f; color: white; font-weight: 500; border-radius: 8px; transition: 0.3s; }
+    .btn:hover { background: #b71c1c; }
+
+    /* Footer */
+    .site-footer { background: #d32f2f; color: #f0f0f0; padding: 40px 20px; }
+    .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-grid h4 { color: white; margin-bottom: 10px; }
+    .footer-grid a { color: #f0f0f0; transition: 0.3s; }
+    .footer-grid a:hover { color: #ffcccc; }
+    .copyright { text-align: center; margin-top: 20px; font-size: 0.9rem; color: #fff; }
+
+    /* Responsive */
+    @media(max-width: 992px) {
+      main { flex-direction: column; }
+      .mini-grid img { flex: 1 1 100%; }
+      .main-nav { display: none; flex-direction: column; background: #d32f2f; position: absolute; top: 60px; right: 0; width: 200px; border-radius: 0 0 8px 8px; }
+      .main-nav a { margin: 10px 0; padding: 10px; }
+      .nav-toggle { display: block; }
+      .main-nav.show { display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">DisasterGuard</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="disaster.html" class="active">Disasters</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <header class="article-hero">
+        <img class="article-hero-img" src="logomoko/karl-callwood-5Wo-2JNnBaQ-unsplash.jpg" alt="Fire">
+        <h1>Fire</h1>
+        <p class="summary">Uncontrolled fire can cause injuries, property loss, and widespread damage. Knowing how fires start and what to do can save lives.</p>
+      </header>
+
+      <section>
+        <h2>Description / Overview</h2>
+        <p>Fire is the rapid oxidation of a material in the exothermic chemical process of combustion, releasing heat, light and various reaction products.</p>
+      </section>
+
+      <section>
+        <h2>Causes</h2>
+        <ul>
+          <li>Unattended cooking</li>
+          <li>Faulty electrical wiring or appliances</li>
+          <li>Open flames (candles, stoves)</li>
+          <li>Chemicals and accelerants</li>
+          <li>Wildfires caused by dry weather and sparks</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Effects</h2>
+        <ul>
+          <li>Burn injuries and smoke inhalation</li>
+          <li>Loss of life and property</li>
+          <li>Infrastructure damage (power, transport)</li>
+          <li>Air pollution and long-term health effects</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Warning Signs</h2>
+        <ul>
+          <li>Unusual smell of smoke</li>
+          <li>Visible flames or embers</li>
+          <li>Electrical sparks or burning plastic smell</li>
+          <li>Alarms sounding (smoke detector)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Safety Tips</h2>
+        <h3>Before</h3>
+        <ul>
+          <li>Install and test smoke detectors monthly.</li>
+          <li>Plan and practice escape routes with family.</li>
+          <li>Have a fire extinguisher and know how to use it.</li>
+          <li>Keep flammable items away from heat sources.</li>
+        </ul>
+
+        <h3>During</h3>
+        <ul>
+          <li>Get low to avoid smoke; crawl if necessary.</li>
+          <li>Use the nearest safe exit; do not use elevators.</li>
+          <li>If trapped, close doors and seal gaps, signal from a window.</li>
+          <li>If clothing catches fire — stop, drop, and roll.</li>
+        </ul>
+
+        <h3>After</h3>
+        <ul>
+          <li>Call emergency services once safe.</li>
+          <li>Do not re-enter the structure until cleared.</li>
+          <li>Seek medical help for smoke inhalation or burns.</li>
+          <li>Contact your insurance provider and document damage.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Preparedness Kit (Fire-focused)</h2>
+        <ul class="kit">
+          <li>Battery-powered flashlight + extra batteries</li>
+          <li>Smoke alarms and spare batteries</li>
+          <li>Multi-purpose (ABC) fire extinguisher</li>
+          <li>First-aid kit with burn dressings</li>
+          <li>Emergency contact list & important documents (copies)</li>
+          <li>Whistle to signal for help</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Real-life Examples</h2>
+        <ul>
+          <li><strong>Household fires:</strong> Kitchen fires from unattended cooking causing major losses.</li>
+          <li><strong>Wildfires:</strong> Large-scale bushfires destroying communities during drought / wind events.</li>
+        </ul>
+      </section>
+
+      <section class="image-grid">
+        <h2>Images</h2>
+        <div class="mini-grid">
+          <img src="logomoko/pexels-shovan-datta-3275479-6126281.jpg" alt="Firefighters">
+          <img src="logomoko/pexels-vladimir-11688878.jpg" alt="House fire">
+          <img src="logomoko/jakub-zerdzicki-gb-lkUPFmkg-unsplash.jpg" alt="Smoke alarm">
+        </div>
+      </section>
+    </article>
+
+    <aside class="side-cta">
+      <div class="card small">
+        <h3>Quick Checklist</h3>
+        <ul>
+          <li>Test smoke alarms monthly</li>
+          <li>Know two escape routes</li>
+          <li>Practice stop, drop & roll</li>
+          <li>Keep extinguisher accessible</li>
+        </ul>
+        <a href="contact.html" class="btn small">Contact Emergency Services</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>DisasterGuard</h4>
+        <p>Helping communities prepare, respond, and recover safely.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <nav>
+          <a href="index.html">Home</a> · 
+          <a href="disasters.html">Disasters</a> · 
+          <a href="about.html">About</a> · 
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Emergency</h4>
+        <p>National emergency hotline: <strong>911</strong></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year3"></span> DisasterGuard — Stay safe.</div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => mainNav.classList.toggle('show'));
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earthquake Awareness</title>
+    <style>
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-image: url("logomoko/shefali-lincoln-yNFVWsQicdg-unsplash.jpg"); /* your background image */
+            background-size: cover;           /* cover entire viewport */
+            background-repeat: no-repeat;
+            background-position: center center; /* center the image */
+            background-attachment: fixed;     /* keeps the background fixed while scrolling */
+           
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #0d3b66;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .site-header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .main-nav a {
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Banner */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .banner-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .banner-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #0d3b66;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffd166;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section h3 {
+            margin-top: 20px;
+            color: #0d3b66;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #0d3b66;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 2rem;
+            }
+            .banner-text p {
+                font-size: 1rem;
+            }
+            .main-nav a {
+                margin-left: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">DisasterGuard</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="disaster.html">Disasters</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="logomoko/pexels-doruk-aksel-anil-477355556-15823381.jpg" alt="Earthquake Image" class="banner-img">
+        <div class="banner-text">
+            <h1>Earthquake Awareness</h1>
+            <p>Learn earthquake causes, warning signs, and safety tips.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- Overview -->
+        <section class="section">
+            <h2>Overview</h2>
+            <p>An earthquake is the shaking of the ground caused by the sudden movement of tectonic plates beneath the Earth's surface. The intensity and duration can vary, causing damage to buildings, infrastructure, and sometimes tsunamis if undersea.</p>
+        </section>
+
+        <!-- Causes -->
+        <section class="section">
+            <h2>Causes</h2>
+            <ul>
+                <li>Tectonic plate movement</li>
+                <li>Fault slips</li>
+                <li>Volcanic activity</li>
+                <li>Human-induced events (rare)</li>
+            </ul>
+        </section>
+
+        <!-- Effects -->
+        <section class="section">
+            <h2>Effects</h2>
+            <ul>
+                <li>Building collapse</li>
+                <li>Landslides</li>
+                <li>Infrastructure damage</li>
+                <li>Tsunamis (if undersea)</li>
+            </ul>
+        </section>
+
+        <!-- Warning Signs -->
+        <section class="section">
+            <h2>Warning Signs</h2>
+            <ul>
+                <li>Little to none — most earthquakes come without warning</li>
+                <li>Small foreshocks may occur before major shockwaves</li>
+            </ul>
+        </section>
+
+        <!-- Safety Tips -->
+        <section class="section">
+            <h2>Safety Tips</h2>
+            <h3>Before</h3>
+            <ul>
+                <li>Secure heavy furniture & appliances</li>
+                <li>Create a disaster plan & meeting point</li>
+                <li>Prepare an emergency kit</li>
+            </ul>
+
+            <h3>During</h3>
+            <ul>
+                <li>Drop, Cover, and Hold On</li>
+                <li>Stay away from windows & fragile items</li>
+                <li>If outdoors: move to an open area</li>
+            </ul>
+
+            <h3>After</h3>
+            <ul>
+                <li>Expect aftershocks</li>
+                <li>Check gas lines and damaged structures</li>
+                <li>Evacuate if necessary</li>
+            </ul>
+        </section>
+
+        <!-- Emergency Kit -->
+        <section class="section">
+            <h2>Emergency Kit Essentials</h2>
+            <ul>
+                <li>Hard hat</li>
+                <li>Sturdy shoes</li>
+                <li>Flashlight & batteries</li>
+                <li>Water & non-perishable food</li>
+                <li>Whistle & local maps</li>
+            </ul>
+        </section>
+
+        <!-- Real Example -->
+        <section class="section">
+            <h2>Real-Life Example</h2>
+            <p>The 1990 Luzon earthquake in the Philippines caused widespread destruction, particularly in Baguio City and surrounding areas, resulting in thousands of casualties and extensive damage to buildings and infrastructure.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2025 DisasterGuard. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

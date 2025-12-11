@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tsunami Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+             color: #333;
+            background-image: url("logomoko/pexels-timmossholder-1876790.jpg"); /* your background image */
+            background-size: cover;           /* cover entire viewport */
+            background-repeat: no-repeat;
+            background-position: center center; /* center the image */
+            background-attachment: fixed;     /* keeps the background fixed while scrolling */
+           
+          
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        h1, h2, h3 {
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #0f172a;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .header-inner {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .main-nav a {
+            margin-left: 1.5rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            transition: color 0.3s;
+        }
+        .main-nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Banner */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+        .banner-img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .banner-text h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .banner-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        .section {
+            margin-bottom: 2.5rem;
+            background-color: #fff;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        .section ul li {
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            margin-top: 1rem;
+            color: #1e3a8a;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 2rem;
+            }
+            .banner-text p {
+                font-size: 1rem;
+            }
+            .main-nav {
+                display: none; /* Simplify for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">DisasterGuard</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="disaster.html">Disasters</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="logomoko/ray-harrington-W05v59_waA8-unsplash.jpg" alt="Tsunami Image" class="banner-img">
+        <div class="banner-text">
+            <h1>Tsunami Awareness</h1>
+            <p>Prepare, stay alert, and learn lifesaving safety measures.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- Overview -->
+        <section class="section">
+            <h2>Overview</h2>
+            <p>
+                A tsunami is a series of powerful ocean waves usually caused by underwater earthquakes, volcanic eruptions, or landslides. These waves can travel extremely fast and rise to great heights upon reaching coastal areas, causing widespread destruction.
+            </p>
+        </section>
+
+        <!-- Causes -->
+        <section class="section">
+            <h2>Causes</h2>
+            <ul>
+                <li>Underwater earthquakes (most common)</li>
+                <li>Volcanic eruptions</li>
+                <li>Submarine landslides</li>
+                <li>Meteor impacts (rare)</li>
+            </ul>
+        </section>
+
+        <!-- Effects -->
+        <section class="section">
+            <h2>Effects</h2>
+            <ul>
+                <li>Massive coastal flooding</li>
+                <li>Destruction of homes and buildings</li>
+                <li>Loss of life</li>
+                <li>Saltwater intrusion into freshwater systems</li>
+                <li>Damage to infrastructure</li>
+            </ul>
+        </section>
+
+        <!-- Warning Signs -->
+        <section class="section">
+            <h2>Warning Signs</h2>
+            <ul>
+                <li>Strong or long-lasting earthquake felt near coastal areas</li>
+                <li>Ocean water suddenly recedes or rises unusually</li>
+                <li>Loud roaring sound coming from the ocean</li>
+                <li>Official tsunami alerts and sirens</li>
+            </ul>
+        </section>
+
+        <!-- Safety Tips -->
+        <section class="section">
+            <h2>Safety Tips</h2>
+
+            <h3>Before</h3>
+            <ul>
+                <li>Learn and practice evacuation routes</li>
+                <li>Know the location of high ground</li>
+                <li>Prepare an emergency kit</li>
+            </ul>
+
+            <h3>During</h3>
+            <ul>
+                <li>Move to high ground immediately</li>
+                <li>Do NOT wait to see the waves</li>
+                <li>Stay away from coastal areas</li>
+            </ul>
+
+            <h3>After</h3>
+            <ul>
+                <li>Stay away from flooded areas</li>
+                <li>Expect multiple waves</li>
+                <li>Wait for official “all clear” notice</li>
+            </ul>
+        </section>
+
+        <!-- Emergency Kit -->
+        <section class="section">
+            <h2>Emergency Kit Essentials</h2>
+            <ul>
+                <li>Water (at least 3 days)</li>
+                <li>Non-perishable food</li>
+                <li>Whistle</li>
+                <li>First aid kit</li>
+                <li>Flashlight & batteries</li>
+                <li>Life jackets (if available)</li>
+                <li>Maps of evacuation areas</li>
+            </ul>
+        </section>
+
+        <!-- Real Example -->
+        <section class="section">
+            <h2>Real-Life Example</h2>
+            <p>
+                The 2004 Indian Ocean tsunami, triggered by a magnitude 9.1 earthquake, caused catastrophic damage across multiple countries and resulted in over 200,000 deaths.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2025 DisasterGuard. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
